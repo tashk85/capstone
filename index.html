@@ -5,32 +5,49 @@
     <title>Colmar Academy</title>
     <link rel="stylesheet" type="text/css" href="./resources/css/reset.css">
     <link rel="stylesheet" type="text/css" href="./resources/css/style.css">
-
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
   </head>
   <body>
     <!-- Header section -->
     <header>
-      <!-- Colmar logo -->
-      <img src=".resources/images/ic-logo.svg" alt="Colmar Academy logo">
-      <span>Colmar Academy</span>
-      <!-- navigation menu -->
-      <nav>
-        <ul>
-          <li><a href="#">On Campus</a></li>
-          <li><a href="#">Online</a></li>
-          <li><a href="#">For Companies</a></li>
-          <li><a href="#">Sign In</a></li>
-        </ul>
-      </nav>
+      <div class="content">
+        <div class="desktop logo">
+          <!-- Colmar logo -->
+          <img src="./resources/images/ic-logo.svg" alt="Colmar Academy logo">
+          <span>Colmar Academy</span>
+        </div>
+        <!-- navigation menu -->
+        <nav class="desktop">
+          <ul>
+            <li><a href="#">On Campus</a></li>
+            <li><a href="#">Online</a></li>
+            <li><a href="#">For Companies</a></li>
+            <li><a href="#">Sign In</a></li>
+            <li><a href="#"><i class="fa fa-search"></i></a></li>
+          </ul>
+        </nav>
+        <nav class="mobile">
+          <ul>
+            <li><a href="#"><img src="./resources/images/ic-on-campus.svg"></a></li>
+            <li><a href="#"><img src="./resources/images/ic-online.svg"></a></li>
+            <li><a href="#"><img src="./resources/images/ic-login.svg"></a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <!-- main content section -->
     <main>
+      <!-- Banner section -->
       <div class="banner">
-        <img src="./resources/images/banner.jpg" alt="Students with books">
-        <h1>Learn something new everyday</h1>
-        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
-        <div class="button">Start here</div>
+        <div class="main-image">
+          <img src="./resources/images/banner.jpg" alt="Students with books">
+        </div>
+        <div class="main-content">
+          <h1>Learn something new everyday</h1>
+          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+          <div class="button">Start here</div>
+        </div>
       </div>
 
       <!-- start of information section with articles -->
@@ -113,7 +130,10 @@
       <!-- start of thesis section -->
       <div class="thesis">
         <div class="main-thesis">
-          <video src="./resources/videos/thesis.mp4" autoplay></video>
+          <video controls>
+            <source src="./resources/videos/thesis.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
           <h2>Reimagine urban</h2>
           <p>"Lorem ipsum dolor sit amet, an quod natum scripserit per, cu hinc interesset cum. Duo illum persequeris ad, pro in ferri maiestatis, mei in illud scriptorem. Mea ad modus utroque apeirian, pri ad harum ubique."</p>
         </div>
@@ -131,13 +151,46 @@
         </div>
       </div>
     </main>
+
+    <!-- footer section -->
     <footer>
-      <div class="content">
+      <!-- footer: navigational links -->
+      <div class="fat-footer">
+        <div class="column">
+          <h3>Main Menu</h3>
+          <ul>
+            <li><a href="#">On Campus</a></li>
+            <li><a href="#">Online</a></li>
+            <li><a href="#">For Companies</a></li>
+            <li><a href="#">Sign In</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <h3>About Colmar Academy</h3>
+          <p>Lorem ipsum dolor sit amet, an quod natum scripserit per, cu hinc interesset cum. Duo illum persequeris ad, pro in ferri maiestatis, mei in illud scriptorem. Mea ad modus utroque apeirian, pri ad harum ubique.</p>
+          <h3>Newsletter</h3>
+        </div>
+        <div class="column">
+          <p>Sign up for news at Colmar Academy</p>
+          <form><input placeholder="your_email@example.com"/><button type="button" name="button">Subscribe</button></form>
+        </div>
+      </div>
+      <!-- footer: copyright section -->
+      <div class="site-links">
         <span class="copyright">© 2018  Colmar Academy, All Rights Reserved</span>
         <ul>
           <li><a href="#">Terms</a></li>
           <li><a href="#">Privacy</a></li>
         </ul>
+      </div>
+      <!-- footer: social media icons -->
+      <div class="social">
+        <ul>
+          <li><a href="#" target="_blank"><i class="fa fa-facebook fa-lg"></i></a></li>
+          <li><a href="#" target="_blank"><i class="fa fa-twitter fa-lg"></i></a></li>
+          <li><a href="#" target="_blank"><i class="fa fa-youtube fa-lg"></i></a></li>
+        </ul>
+
       </div>
     </footer>
   </body>
