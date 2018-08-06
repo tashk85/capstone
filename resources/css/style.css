@@ -16,6 +16,12 @@ h2 {
   padding-bottom: 1rem;
 }
 
+h4 {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  padding-bottom: 1rem;
+}
+
 .button {
   width: 30%;
   background-color: white;
@@ -33,6 +39,11 @@ h2 {
 }
 
 .image-container img {
+  display: block;
+  max-width: 100%;
+}
+
+video {
   display: block;
   max-width: 100%;
 }
@@ -90,6 +101,7 @@ header .mobile {
   justify-content: center;
   align-items: center;
   padding: 2rem 1.5rem;
+  background-color: #f3f3f3;
   /*background: url("../images/banner.jpg");
   background-position: top;
   background-size: cover;
@@ -103,4 +115,107 @@ header .mobile {
 
 .banner .content {
   padding-right: 4rem;
+}
+
+/* Information Section */
+.info {
+  padding: 2rem 1.5rem;
+}
+
+.main-article {
+  display: block;
+  float: left;
+  width: 60%;
+}
+
+.main-article .content {
+  padding-top: 2rem;
+}
+
+.main-article h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.main-article p {
+  font-size: 0.75rem;
+}
+
+.articles {
+  display: inline-flex;
+  flex-direction: column;
+  width: 40%;
+  /*border-left: 1px solid #dddddd;*/
+}
+
+.article {
+  display: inline-flex;
+  align-items: center;
+  border-bottom: 1px solid #dddddd;
+  padding: 1rem;
+}
+
+.article .image-container {
+    width: 35%;
+    height: auto;
+}
+
+.article .content {
+    width: 65%;
+    padding-left: 1rem;
+}
+
+.article span {
+  font-size: 0.85rem;
+  color: #016fd1;
+}
+
+/* Courses Section */
+.courses-main {
+  padding: 2rem 1.5rem;
+}
+
+.courses {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Thesis Section */
+.thesis {
+  padding: 2rem 1.5rem;
+}
+
+.main-thesis {
+  display: block;
+  float: left;
+  width: 60%;
+}
+
+.thesis-articles {
+  display: inline-flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.small-thesis {
+  display: inline-flex;
+  align-items: center;
+  border-bottom: 1px solid #dddddd;
+  padding: 1rem;
+}
+
+.small-thesis .image-container {
+  width: 35%;
+  height: auto;
+}
+
+.small-thesis .content {
+  width: 65%;
+  padding-left: 1rem;
+}
+
+/* Footer Section */
+footer {
+  padding: 2rem 1.5rem;
 }
