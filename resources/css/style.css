@@ -24,7 +24,7 @@ h4 {
 
 .button {
   width: 30%;
-  background-color: white;
+
   border: 1px solid #dddddd;
   color: black;
   padding: 0.75rem 0 0.75rem 0;
@@ -68,7 +68,7 @@ header .logo {
 }
 
 header .logo span {
-  font-family: Garamond, serif;
+  font-family: 'Neuton', Garamond, serif;
   font-size: 20px;
   text-transform: uppercase;
   line-height: 1.6;
@@ -100,8 +100,8 @@ header .mobile {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem 1.5rem;
   background-color: #f3f3f3;
+  padding: 2rem 1.5rem;
   /*background: url("../images/banner.jpg");
   background-position: top;
   background-size: cover;
@@ -110,22 +110,25 @@ header .mobile {
 
 .banner .image-container {
   width: 60%;
-  padding-right: 1.5rem;
 }
 
 .banner .content {
-  padding-right: 4rem;
+  padding-left: 1.5rem;
 }
 
 /* Information Section */
 .info {
-  padding: 2rem 1.5rem;
+  display: block;
+  float: left;
 }
 
 .main-article {
+  width: 60%;
   display: block;
   float: left;
-  width: 60%;
+  box-sizing: border-box;
+  padding: 2rem 1.5rem;
+  border-right: 1px solid #dddddd;
 }
 
 .main-article .content {
@@ -142,17 +145,25 @@ header .mobile {
 }
 
 .articles {
-  display: inline-flex;
-  flex-direction: column;
   width: 40%;
-  /*border-left: 1px solid #dddddd;*/
+  display: block;
+  float: left;
+  box-sizing: border-box;
+  padding-top: 1rem;
+  padding-right: 1.5rem;
 }
 
 .article {
   display: inline-flex;
   align-items: center;
-  border-bottom: 1px solid #dddddd;
   padding: 1rem;
+}
+/*
+.article:first-child {
+  padding-top: 0;
+}*/
+.article:hover {
+  background-color: #dddddd;
 }
 
 .article .image-container {
@@ -163,6 +174,10 @@ header .mobile {
 .article .content {
     width: 65%;
     padding-left: 1rem;
+}
+
+.article h2 {
+  font-weight: bold;
 }
 
 .article span {
@@ -183,25 +198,31 @@ header .mobile {
 
 /* Thesis Section */
 .thesis {
-  padding: 2rem 1.5rem;
+  display: block;
+  float: left;
 }
 
 .main-thesis {
+  width: 60%;
   display: block;
   float: left;
-  width: 60%;
+  box-sizing: border-box;
+  padding: 2rem 1.5rem;
+  border-right: 1px solid #dddddd;
 }
 
 .thesis-articles {
-  display: inline-flex;
-  flex-direction: column;
   width: 40%;
+  display: block;
+  float: left;
+  box-sizing: border-box;
+  padding-top: 1rem;
+  padding-right: 1.5rem;
 }
 
 .small-thesis {
   display: inline-flex;
   align-items: center;
-  border-bottom: 1px solid #dddddd;
   padding: 1rem;
 }
 
