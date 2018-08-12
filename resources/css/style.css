@@ -1,12 +1,12 @@
 /* Universal Styles */
 html {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Noto Sans', Arial, sans-serif;
   font-size: 16px;
 }
 
 h1 {
   font-size: 2.5rem;
-  font-weight: bold;
+  font-weight: 800;
   line-height: 1.2;
   padding-bottom: 1.25rem;
 }
@@ -318,7 +318,7 @@ header .mobile {
 
 /* Courses Section */
 .courses-outer {
-  display: flex;
+  display: table;
   flex-direction: column;
   justify-content: center;
   align-content: flex-start;
@@ -328,7 +328,7 @@ header .mobile {
 
 .courses-outer h2 {
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 800;
   display: block;
   padding-bottom: 1rem;
   text-transform: uppercase;
@@ -356,17 +356,18 @@ header .mobile {
 }
 
 .course .image-container {
+  width: 100%;
   height: auto;
 }
 
 .course .content {
-  height: 100%;
+  flex: 1;
   padding: 1rem 1rem 1.5rem 1rem;
   background-color: white;
 }
 
 .course h3 {
-  font-weight: bold;
+  font-weight: 800;
 }
 
 .course h3:hover {
