@@ -22,19 +22,23 @@ h4 {
   padding-bottom: 1rem;
 }
 
-.button {
+button {
   width: 30%;
+  font-size: 0.75rem;
   border: 1px solid #dddddd;
   color: black;
   padding: 0.75rem 0 0.75rem 0;
   text-align: center;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
-.button:hover {
+button:hover {
   background-color: #016fd1;
   color: white;
   border: 1px solid #016fd1;
+  transition: all 750ms;
+  -webkit-transition: all 750ms;
 }
 
 .image-container {
@@ -51,8 +55,16 @@ video {
   max-width: 100%;
 }
 
-@media only screen and (max-width: 760px) {
+input {
+  min-width: 10rem;
+  text-align: center;
+  padding: 0.75rem 0 0.75rem 0;
+}
 
+@media only screen and (max-width: 760px) {
+  .banner button {
+    width: 100%;
+  }
 }
 
 /* Header Section */
@@ -72,14 +84,20 @@ header .content {
 header .logo {
   flex: 1;
   display: inline-flex;
+  align-items: center;
 }
 
-header .logo span {
+.logo span {
   font-family: 'Neuton', Garamond, serif;
-  font-size: 20px;
+  font-size: 1.25rem;
   text-transform: uppercase;
   line-height: 1.6;
   padding-left: 0.25rem;
+  padding-bottom: 0;
+}
+
+.logo-C {
+  font-weight: bold;
 }
 
 /* Navigation links on left */
@@ -98,10 +116,15 @@ nav a {
   color: #4a4a4a;
 }
 
+nav a:hover {
+  color: #016fd1;
+}
+
 header .mobile {
   display: none;
 }
 
+/* Header section - CSS for screens smaller than 760px wide */
 @media only screen and (max-width: 760px) {
   header .desktop {
     display: none;
@@ -126,6 +149,7 @@ header .mobile {
   header .mobile li {
     padding: 0;
   }
+
 }
 
 /* Banner Section */
@@ -145,7 +169,22 @@ header .mobile {
   padding-left: 1.5rem;
 }
 
+/* Banner section - CSS for screens smaller than 760px wide */
 @media only screen and (max-width: 760px) {
+  .banner {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .banner .image-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .banner .content {
+    padding: 2rem 1.5rem;
+  }
 
 }
 
@@ -153,6 +192,7 @@ header .mobile {
 .articles-outer {
   display: block;
   float: left;
+  width: 100%;
 }
 
 .main-article {
@@ -161,7 +201,6 @@ header .mobile {
   float: left;
   box-sizing: border-box;
   padding: 2rem 1.5rem;
-  border-right: 1px solid #dddddd;
 }
 
 .main-article .content {
@@ -177,6 +216,7 @@ header .mobile {
   font-size: 0.75rem;
 }
 
+/* small articles on side */
 .articles {
   width: 40%;
   display: block;
@@ -192,28 +232,33 @@ header .mobile {
   padding: 1rem;
 }
 
-.article .image-container:after {
-    content:'\A';
-    position:absolute;
-    width:100%; height:100%;
-    top:0; left:0;
-    background:rgba(0,0,0,0.5);
-    opacity:0;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
+.article:hover {
+    background-color: #E6E6E6;
+    transition: all 750ms;
+    -webkit-transition: all 750ms;
 }
-.article:hover .image-container:after {
-    opacity:1;
+
+.article:hover .image-container {
+    filter: grayscale(100%);
+    transition: all 750ms;
+    -webkit-transition: all 750ms;
 }
 
 .article:hover .content h2 {
-  color: #be0f35;
+  color: #E94200;
+  transition: all 750ms;
+  -webkit-transition: all 750ms
 }
 
 .article .image-container {
     width: 35%;
     height: auto;
     position: relative;
+    object-fit: cover;
+}
+
+.article .image-container.mobile {
+  display: none;
 }
 
 .article .content {
@@ -227,7 +272,7 @@ header .mobile {
 
 .article span {
   font-size: 0.85rem;
-  color: #016fd1;
+  color: #A1A1A1;
 }
 
 .articles-outer:after {
@@ -236,18 +281,49 @@ header .mobile {
   display: table;
 }
 
+/* Article section - CSS for screens smaller than 760px wide */
 @media only screen and (max-width: 760px) {
+  .articles-outer {
+    border-bottom: 1px solid #dddddd;
+  }
+
+  .main-article {
+    display: none;
+  }
+
+  .articles {
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  .article {
+    display: block;
+  }
+
+  .article .image-container.desktop {
+    display: none;
+  }
+
+  .article .image-container.mobile {
+    display: block;
+    width: 100%;
+  }
+
+  .article .content {
+      width: 100%;
+      padding: 1rem;
+  }
 
 }
 
 /* Courses Section */
 .courses-outer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-content: flex-start;
   padding: 2rem 4.5rem;
   background-color: #f3f3f3;
-  flex-wrap: wrap;
-  align-content: flex-start;
 }
 
 .courses-outer h2 {
@@ -256,6 +332,7 @@ header .mobile {
   display: block;
   padding-bottom: 1rem;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .courses {
@@ -267,6 +344,7 @@ header .mobile {
 
 .course-rows {
   display: flex;
+  width: 100%;
   justify-content: center;
 }
 
@@ -291,11 +369,55 @@ header .mobile {
   font-weight: bold;
 }
 
+.course h3:hover {
+  color: #E94200;
+  transition: all 750ms;
+  -webkit-transition: all 750ms
+}
+
 .course h4 {
   padding: 0.5rem 0;
 }
 
+/* Course section - CSS for screens smaller than 760px wide */
 @media only screen and (max-width: 760px) {
+  .courses-outer {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: stretch;
+    padding: 2rem 1rem;
+    background-color: white;
+    border-bottom: 1px solid #dddddd;
+  }
+
+  .course-rows {
+    flex-flow: column wrap;
+    width: 100%;
+  }
+
+  .course {
+    width: 100%;
+    display: block;
+    padding: 0.25rem 0;
+  }
+
+  .course .image-container {
+    display: none;
+  }
+
+  .course .content {
+    padding: 1rem;
+    background-color: #f3f3f3;
+  }
+
+  .course h3 {
+    font-size: 1.5rem;
+    vertical-align: middle;
+  }
+
+  .course h4 {
+    display: none;
+  }
 
 }
 
@@ -303,6 +425,16 @@ header .mobile {
 .thesis-outer {
   display: block;
   float: left;
+  padding-top: 2rem;
+}
+
+.thesis-heading h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: block;
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .main-thesis {
@@ -311,7 +443,6 @@ header .mobile {
   float: left;
   box-sizing: border-box;
   padding: 2rem 1.5rem;
-  border-right: 1px solid #dddddd;
 }
 
 .main-thesis .content {
@@ -338,22 +469,22 @@ header .mobile {
   padding: 1rem;
 }
 
-.small-thesis .image-container:after {
-    content:'\A';
-    position:absolute;
-    width:100%; height:100%;
-    top:0; left:0;
-    background:rgba(0,0,0,0.5);
-    opacity:0;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
+.small-thesis:hover {
+    background-color: #E6E6E6;
+    transition: all 750ms;
+    -webkit-transition: all 750ms;
 }
-.small-thesis:hover .image-container:after {
-    opacity:1;
+
+.small-thesis:hover .image-container {
+    filter: grayscale(100%);
+    transition: all 750ms;
+    -webkit-transition: all 750ms;
 }
 
 .small-thesis:hover .content h2 {
-  color: #be0f35;
+  color: #E94200;
+  transition: all 750ms;
+  -webkit-transition: all 750ms
 }
 
 .small-thesis .image-container {
@@ -371,8 +502,24 @@ header .mobile {
   font-weight: bold;
 }
 
+/* Thesis section - CSS for screens smaller than 760px wide */
 @media only screen and (max-width: 760px) {
+  .thesis-outer {
+    padding-bottom: 2rem;
+  }
 
+  .main-thesis {
+    width: 100%;
+    padding: 0 1.5rem;
+  }
+
+  .main-thesis .content {
+    display: none;
+  }
+
+  .thesis-articles {
+    display: none;
+  }
 }
 
 /* Footer Section */
@@ -381,7 +528,6 @@ footer {
   flex-wrap: wrap;
   background-color: #f3f3f3;
   padding: 2rem 5rem;
-  border: 1px dashed green;
 }
 
 footer h3, li {
@@ -413,6 +559,10 @@ footer h3, li {
   padding: 0.5rem 0;
 }
 
+.column li a:hover {
+  text-decoration: underline;
+}
+
 .site-links {
   display: block;
   position: relative;
@@ -427,6 +577,28 @@ footer h3, li {
   line-height: 2.5;
 }
 
+.site-links li a:hover {
+  text-decoration: underline;
+}
+
+.social li a:hover {
+  color: #016fd1;
+}
+
+/* Footer section - CSS for screens smaller than 760px wide */
 @media only screen and (max-width: 760px) {
+  footer {
+    padding: 2rem 1.5rem;
+  }
+
+  .column {
+    width: 100%;
+    height: auto;
+    display: block;
+    float: left;
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+    box-sizing: border-box;
+  }
 
 }

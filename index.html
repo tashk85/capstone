@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="./resources/css/reset.css">
     <link rel="stylesheet" type="text/css" href="./resources/css/style.css">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="icon" href="./resources/images/ic-favicon.ico" type="image/x-icon">
   </head>
   <body>
     <!-- Header section -->
@@ -15,7 +16,7 @@
         <div class="desktop logo">
           <!-- Colmar logo -->
           <img src="./resources/images/ic-logo.svg" alt="Colmar Academy logo">
-          <span class="Colmar">Colmar</span><span class="Academy">Academy</span>
+          <span class="logo-C">Colmar</span><span class="logo-A">Academy</span>
         </div>
         <!-- navigation menu -->
         <nav class="desktop">
@@ -24,7 +25,7 @@
             <li><a href="#">Online</a></li>
             <li><a href="#">For Companies</a></li>
             <li><a href="#">Sign In</a></li>
-            <li><a href="#"><i class="fa fa-search"></i></a></li>
+            <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
           </ul>
         </nav>
         <nav class="mobile">
@@ -41,22 +42,22 @@
     <!-- main content section -->
     <main>
       <!-- Banner section -->
-      <div class="banner">
+      <section class="banner">
         <div class="image-container">
-          <img src="./resources/images/banner.jpg" alt="Students with books">
+          <img src="./resources/images/banner.jpg" alt="Students sitting at table with books">
         </div>
         <div class="content">
           <h1>Learn Something New Everyday</h1>
           <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
-          <div class="button">Start here <i class="fa fa-angle-right"></i></div>
+          <button type="button" name="Click here to start">Start Here <i class="fa fa-angle-right"></i></button>
         </div>
-      </div>
+      </section>
 
       <!-- start of information section with articles -->
-      <div class="articles-outer">
+      <section class="articles-outer">
         <div class="main-article">
           <div class="image-container">
-            <img src="./resources/images/information-main.jpg" alt="Information main image">
+            <img src="./resources/images/information-main.jpg" alt="Student sitting outdoors reading">
           </div>
           <div class="content">
             <h2>It Doesn't Hurt to Keep Practicing</h2>
@@ -65,41 +66,56 @@
           </div>
         </div>
         <div class="articles">
-          <div class="article">
-            <div class="image-container">
-              <img src="./resources/images/information-orientation.jpg" alt="Orientation image">
+          <a href="#">
+            <div class="article">
+              <div class="image-container desktop">
+                <img src="./resources/images/information-orientation.jpg" alt="Overhead photo of students walking along path">
+              </div>
+              <div class="image-container mobile">
+                <img src="./resources/images/information-orientation-mobile.jpg" alt="Overhead photo of students walking along path">
+              </div>
+              <div class="content">
+                <h2>Orientation Date</h2>
+                <h4>Tue 10/11 & Wed 10/12: 8am-3pm</h4>
+                <span>Read more</span>
+              </div>
             </div>
-            <div class="content">
-              <h2>Orientation Date</h2>
-              <h4>Tue 10/11 & Wed 10/12: 8am-3pm</h4>
-              <span>Read more</span>
+          </a>
+          <a href="#">
+            <div class="article">
+              <div class="image-container desktop">
+                <img src="./resources/images/information-campus.jpg" alt="Interior of campus building">
+              </div>
+              <div class="image-container mobile">
+                <img src="./resources/images/information-campus-mobile.jpg" alt="Interior of campus building">
+              </div>
+              <div class="content">
+                <h2>Our Campus</h2>
+                <h4>Find which campus is closest to you</h4>
+                <span>Read more</span>
+              </div>
             </div>
-          </div>
-          <div class="article">
-            <div class="image-container">
-              <img src="./resources/images/information-campus.jpg" alt="Campus image">
+          </a>
+          <a href="#">
+            <div class="article">
+              <div class="image-container desktop">
+                <img src="./resources/images/information-guest-lecture.jpg" alt="Guest lecturer Oliver Sack">
+              </div>
+              <div class="image-container mobile">
+                <img src="./resources/images/information-guest-lecture-mobile.jpg" alt="Guest lecturer Oliver Sack">
+              </div>
+              <div class="content">
+                <h2>Our Guest Lecturer</h2>
+                <h4>Join a keynote with Oliver Sack about music in medical treatment</h4>
+                <span>Read more</span>
+              </div>
             </div>
-            <div class="content">
-              <h2>Our Campus</h2>
-              <h4>Find which campus is close by you</h4>
-              <span>Read more</span>
-            </div>
-          </div>
-          <div class="article">
-            <div class="image-container">
-              <img src="./resources/images/information-guest-lecture.jpg" alt="Guest lecturer image">
-            </div>
-            <div class="content">
-              <h2>Our Guest Lecturer</h2>
-              <h4>Join a keynote with Oliver Sack about music in medical treatment</h4>
-              <span>Read more</span>
-            </div>
-          </div>
+          </a>
         </div>
-      </div>
+      </section>
 
       <!-- start of courses section -->
-      <div class="courses-outer">
+      <section class="courses-outer">
         <div class="courses-heading">
           <h2>Start Learning</h2>
         </div>
@@ -109,10 +125,10 @@
             <!-- software engineering course box -->
             <div class="course">
               <div class="image-container">
-                <img src="./resources/images/course-software.jpg" alt="Software Engineering course">
+                <img src="./resources/images/course-software.jpg" alt="Two computer screens sitting side by side">
               </div>
               <div class="content">
-                <h3>Software Engineering</h3>
+                <a href="#"><h3>Software Engineering</h3></a>
                 <h4>COURSE</h4>
                 <h4>Web Development, Mobile Development, iOT, APIs</h4>
               </div>
@@ -120,10 +136,10 @@
             <!-- computer art course box -->
             <div class="course">
               <div class="image-container">
-                <img src="./resources/images/course-computer-art.jpg" alt="Computer art course">
+                <img src="./resources/images/course-computer-art.jpg" alt="Mobile phone in a person's hand">
               </div>
               <div class="content">
-                <h3>Computer Art</h3>
+                <a href="#"><h3>Computer Art</h3></a>
                 <h4>COURSE</h4>
                 <h4>Imaging & Design, Web Design, Motion Graphics & Visual Effects, Computer Animation</h4>
               </div>
@@ -131,10 +147,10 @@
             <!-- design course box -->
             <div class="course">
               <div class="image-container">
-                <img src="./resources/images/course-design.jpg" alt="Design course">
+                <img src="./resources/images/course-design.jpg" alt="Person holding a vintage camera">
               </div>
               <div class="content">
-                <h3>Design</h3>
+                <a href="#"><h3>Design</h3></a>
                 <h4>COURSE</h4>
                 <h4>User Experience Design, User Research, Visual Design</h4>
               </div>
@@ -145,10 +161,10 @@
             <!-- data course box -->
             <div class="course">
               <div class="image-container">
-                <img src="./resources/images/course-data.jpg" alt="Data course">
+                <img src="./resources/images/course-data.jpg" alt="Laptop with screen showing data analytics report">
               </div>
               <div class="content">
-                <h3>Data</h3>
+                <a href="#"><h3>Data</h3></a>
                 <h4>COURSE</h4>
                 <h4>Data Science, Big Data, SQL, Data Visualization</h4>
               </div>
@@ -156,10 +172,10 @@
             <!-- business course box -->
             <div class="course">
               <div class="image-container">
-                <img src="./resources/images/course-business.jpg" alt="Business course">
+                <img src="./resources/images/course-business.jpg" alt="Game of chess">
               </div>
               <div class="content">
-                <h3>Business</h3>
+                <a href="#"><h3>Business</h3></a>
                 <h4>COURSE</h4>
                 <h4>Product Development, Business Development, Startup</h4>
               </div>
@@ -167,20 +183,23 @@
             <!-- marketing course box -->
             <div class="course">
               <div class="image-container">
-                <img src="./resources/images/course-marketing.jpg" alt="Marketing course">
+                <img src="./resources/images/course-marketing.jpg" alt="Person using smart watch">
               </div>
               <div class="content">
-                <h3>Marketing</h3>
+                <a href="#"><h3>Marketing</h3></a>
                 <h4>COURSE</h4>
                 <h4>Analytics, Content Marketing, Mobile Marketing</h4>
               </div>
             </div>
           </div><!-- end row 2 of courses -->
         </div>
-      </div>
+      </section>
 
       <!-- start of thesis section -->
-      <div class="thesis-outer">
+      <section class="thesis-outer">
+        <div class="thesis-heading">
+          <h2>Thesis Exhibit</h2>
+        </div>
         <div class="main-thesis">
           <video controls>
             <source src="./resources/videos/thesis.mp4" type="video/mp4">
@@ -194,7 +213,7 @@
         <div class="thesis-articles">
           <div class="small-thesis">
             <div class="image-container">
-              <img src="./resources/images/thesis-fisma.jpg" alt="Fisma">
+              <img src="./resources/images/thesis-fisma.jpg" alt="Papers scattered on desk with person highlighting notes">
             </div>
             <div class="content">
               <h2>Fisma: Design and Prototype</h2>
@@ -203,7 +222,7 @@
           </div>
           <div class="small-thesis">
             <div class="image-container">
-              <img src="./resources/images/thesis-now-and-then.jpg" alt="New York skyline">
+              <img src="./resources/images/thesis-now-and-then.jpg" alt="New York city skyline">
             </div>
             <div class="content">
               <h2>Now and Then</h2>
@@ -211,49 +230,48 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </main>
 
     <!-- footer section -->
     <footer>
       <!-- footer: navigational links -->
       <div class="fat-footer">
-        <div class="column">
+        <div class="column" role="navigation">
           <h3>Main Menu</h3>
           <hr>
-          <ul>
+          <ul role="menu">
             <li><a href="#">On Campus</a></li>
             <li><a href="#">Online</a></li>
             <li><a href="#">For Companies</a></li>
             <li><a href="#">Sign In</a></li>
           </ul>
         </div>
-        <div class="column">
+        <div class="column" role="presentation">
           <h3>About Colmar Academy</h3>
           <hr>
           <h4>Lorem ipsum dolor sit amet, an quod natum scripserit per, cu hinc interesset cum. Duo illum persequeris ad, pro in ferri maiestatis, mei in illud scriptorem. Mea ad modus utroque apeirian, pri ad harum ubique.</h4>
         </div>
-        <div class="column">
+        <div class="column" role="presentation">
           <h3>Newsletter</h3>
           <hr>
           <h4>Sign up for news at Colmar Academy</h4>
-          <form><input placeholder="your_email@example.com"/><button type="button" name="button">Subscribe</button></form>
+          <form><input placeholder="your_email@example.com"/><button type="button" name="subscribe">Subscribe</button></form>
         </div>
       </div>
       <!-- footer: copyright section -->
       <div class="site-links">
-        <ul class="copyright">
-          <li>© 2018  Colmar Academy, All Rights Reserved</li>
-          <li><a href="#">Terms</a></li>
-          <li><a href="#">Privacy</a></li>
+        <ul class="copyright" role="presentation">
+          <li>© 2018  Colmar Academy &bull; All Rights Reserved</li>
+          <li><a href="#">Terms &amp; Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
         </ul>
         <!-- footer: social media icons -->
-        <ul class ="social">
-          <li><a href="#" target="_blank"><i class="fa fa-facebook fa-lg"></i></a></li>
-          <li><a href="#" target="_blank"><i class="fa fa-twitter fa-lg"></i></a></li>
-          <li><a href="#" target="_blank"><i class="fa fa-youtube fa-lg"></i></a></li>
+        <ul class="social" role="presentation">
+          <li><a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook fa-lg"></i></a></li>
+          <li><a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter fa-lg"></i></a></li>
+          <li><a href="https://www.youtube.com" target="_blank"><i class="fa fa-youtube fa-lg"></i></a></li>
         </ul>
-
       </div>
     </footer>
   </body>
